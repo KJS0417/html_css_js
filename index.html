@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이프 갤러리</title>
+    <link rel="shortcut icon" href="./img/favicon.png" data-next-head="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0b5d770286.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+        <h1>UI/UX <span>PORTFOLIO</span></h1>
+
+        <ul class="auto">
+            <li class="btnStart">
+                <i class="fas fa-play"></i>
+            </li>
+            <li class="btnStop">
+                <i class="fas fa-pause"></i>
+            </li>
+        </ul>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.png">
+                        <h2>Serene Horizons</h2>
+                        <p>The quick brown fox jumps over the lazy dog quite frequently now.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.png">
+                        <h2>Nature's Embrace</h2>
+                        <p>She decided to pursue her dreams of becoming a renowned artist.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.png">
+                        <h2>Whispers of the Wild</h2>
+                        <p>Despite the challenges, they managed to complete the project on time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.png">
+                        <h2>Golden Hour Glow</h2>
+                        <p>The ancient ruins offered a glimpse into a long-forgotten civilization.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.png">
+                        <h2>Tranquil Vistas</h2>
+                        <p>He carefully considered all the options before making his final choice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic6.png">
+                        <h2>Majestic Landscapes</h2>
+                        <p>A vibrant rainbow appeared in the sky after the unexpected rain shower.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic7.png">
+                        <h2>Pathways to Peace</h2>
+                        <p>The bustling city never sleeps, always alive with activity and noise.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic8.png">
+                        <h2>Untamed Beauty</h2>
+                        <p>Learning a new language can be a challenging yet rewarding experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic9.png">
+                        <h2>Earth's Canvas</h2>
+                        <p>They enjoyed a delicious meal at the charming restaurant downtown tonight.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic10.png">
+                        <h2>Skyline Dreams</h2>
+                        <p>The mysterious old house stood silently on the hill overlooking the valley.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".wrap", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // 슬라이드 몇 개 보이게 할건지
+            slidesPerView: "auto",
+            spaceBetween: 50,
+            loop: true,
+            centeredSlides: true,
+            speed: 1000,
+            direction: "horizontal",
+            effect: "coverflow",
+            coverflowEffect: {
+                // 회전시킬 각도
+                rotate: 50,
+                stretch: -100,
+                // transform 이용할 때의 perspective 역할
+                depth: 400,
+                modifier: 1,
+                slideShadows: false
+            },
+            autoplay: {
+                // 1초마다 자동으로 넘기기
+                delay: 1000,
+                // 자동 재생 도중, 화살표 누르면 자동 재생 종료
+                disableOnInteraction: true
+            }
+        });
+        
+        // autoplay 구현 부분
+        const btnStart = document.querySelector(".btnStart");
+        const btnStop = document.querySelector(".btnStop");
+
+        btnStart.addEventListener("click",()=>{
+            swiper.autoplay.start();
+        });
+
+        btnStop.addEventListener("click",()=>{
+            swiper.autoplay.stop();
+        });
+    </script>
+
+</body>
+</html>
