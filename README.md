@@ -2,7 +2,7 @@
 html, css, 자바스크립트를 이용해 만든 웹페이지의 파일을 올려놓은 저장소이다.
 
 ## !!! 동작 화면 !!!
-[swipe gallery.mp4] (https://youtu.be/02rDqQIXYgg)
+[swipe gallery.mp4](https://youtu.be/02rDqQIXYgg)
 
 ### 주요 파일
 - index.html
